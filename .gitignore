@@ -1,0 +1,15 @@
+# Dependency directory
+*/node_modules/
+
+# TypeScript compiled JavaScript files
+# *.js
+# *.js.map
+
+# Build output directory
+*/dist/
+# or if you use "build" as your output directory
+# */build/
+
+# Credentials
+*/server/.env
+
