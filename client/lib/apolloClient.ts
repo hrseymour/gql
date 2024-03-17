@@ -2,12 +2,14 @@ import { ApolloClient, InMemoryCache, HttpLink, split } from '@apollo/client';
 import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from '@apollo/client/utilities';
 
+// Your GraphQL endpoint
 const httpLink = new HttpLink({
-  uri: 'http://' + process.env.NEXT_PUBLIC_GRAPHQL_HOST, // Your GraphQL endpoint
+  uri: 'http://' + process.env.NEXT_PUBLIC_GRAPHQL_ADDRESS + "/graphql", 
 });
 
+// Your GraphQL WebSocket endpoint
 const wsLink = new WebSocketLink({
-  uri: 'ws://' + process.env.NEXT_PUBLIC_GRAPHQL_HOST, // Your GraphQL WebSocket endpoint
+  uri: 'ws://' + process.env.NEXT_PUBLIC_GRAPHQL_ADDRESS + "/graphql",
   options: {
     reconnect: true,
   },

@@ -5,9 +5,9 @@ type Person {
 }
 
 type Query {
-  oldestPeople(limit: Int!): [Person!]!
-  youngestPeople(limit: Int!): [Person!]!
-  peopleByNameStart(letter: String!, limit: Int!): [Person!]!
+  oldestPeople(limit: Int = 3): [Person!]!
+  youngestPeople(limit: Int = 3): [Person!]!
+  peopleByNameStart(letter: String!, limit: Int = 3): [Person!]!
 }
 
 type Mutation {
